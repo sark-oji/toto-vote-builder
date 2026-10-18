@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "toto 投票パターン入力サポート",
+  "version": "0.3.0",
+  "description": "totoの投票パターンをまとめて入力する補助ツールです。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.toto-dream.com/dcs/subos/screen/ps01/spsl000/PGSPSL00001MoveSingleVoteSheet.form*",
+        "https://store.toto-dream.com/dcs/subos/screen/ps01/spsl000/PGSPSL00001MoveTotoLoto.form*"
+      ],
+      "js": ["toto-autofill.user.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
